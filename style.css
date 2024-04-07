@@ -1,78 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
 
-
-
-
 * {
   font-family: 'Montserrat';
   margin: 0;
   padding: 0;
-  
 }
 
-.container{
-  display: flex;
-  background: linear-gradient(black, gray);
-  color: rgb(9, 223, 141);
-  height: 100vh;
-  
-  justify-content: center;
+.menu {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
-.perfil nav ul{
-  margin: 20px 50px 0 0;
-  text-align: right;
- 
-
-}
-
-.perfil nav li{
+.menu ul {
   list-style-type: none;
-  display: inline-block;
-  border-radius: 8px;
-  border: 2px solid rgba(53, 50, 50, 0.699);
-  margin-left: 10px;
-
-}
-
-.perfil nav a{
-  background-color: rgba(0, 0, 0, .3);
-  padding: 16px;
-  display: block;
-  font-size: 15px;
-  color: rgb(92, 144, 153);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.perfil{
-
-  width: 80%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.perfil h1{
-  margin-top: 50px;
-  font-size: 40px;
-  text-shadow: 
-  1px 1px 10px rgb(9, 223, 141);
-  ;
+.menu ul li {
+  display: inline;
 }
 
-.perfil p{
-  font-size: 15px;
+.menu ul li a {
   display: inline-block;
-  margin-top: 30px;
-  padding: 20px;
-  background-color: rgba(100, 97, 97, 0.5);
-  border-radius: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-.perfil img{
+.menu ul li a:hover {
+  background-color: #555;
+  border-bottom: 2px solid #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(to bottom, #555555, rgb(9, 223, 141));
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.perfil,
+.sobre,
+.projetos,
+.tecnologias,
+.contatos {
+  text-align: center;
+  padding: 50px 0;
+  min-height: calc(100vh - 100px);/* Adicionado aqui */
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil .header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil h2 {
+  font-size: 24px;
+  color: rgb(9, 223, 141);
+  text-shadow: 1px 1px 10px rgb(9, 223, 141);
+}
+
+.perfil img {
+  width: 150px;
   border-radius: 50%;
   filter: drop-shadow(1px 1px 10px rgb(9, 223, 141, .8));
-  height: 200px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projetos .projeto {
+  margin: 0 20px 20px;
+  background-color: #333;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projetos .projeto h3 {
+  font-size: 24px;
+  color: rgb(9, 223, 141);
+}
+
+.projetos .projeto p {
+  font-size: 18px;
+  color: #fff;
+}
