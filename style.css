@@ -16,7 +16,7 @@
 .menu ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 8px;
   text-align: center;
 }
 
@@ -45,14 +45,6 @@
   background: linear-gradient(to bottom, #555555, rgb(9, 223, 141));
 }
 
-.cabecalho {
-  position: sticky;
-  top: 0;
-  background-color: #333;
-  width: 100%;
-  z-index: 999;
-}
-
 
 .perfil,
 .sobre,
@@ -60,8 +52,8 @@
 .tecnologias,
 .contatos {
   text-align: center;
-  padding: 50px 0;
-  min-height: calc(100vh - 100px);/* Adicionado aqui */
+  padding: 60px 0;
+  min-height: 100vh;/* Adicionado aqui */
 }
 
 .perfil {
@@ -77,16 +69,16 @@
 }
 
 .perfil h2 {
-  font-size: 24px;
+  font-size: 34px;
   color: rgb(9, 223, 141);
   text-shadow: 1px 1px 10px rgb(9, 223, 141);
 }
 
 .perfil img {
-  width: 150px;
+  width: 160px;
   border-radius: 50%;
   filter: drop-shadow(1px 1px 10px rgb(9, 223, 141, .8));
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }
 
 .projetos {
